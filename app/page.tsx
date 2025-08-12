@@ -4,6 +4,7 @@ import HeroSection from '@/components/home/hero-section';
 import ValueProps from '@/components/home/value-props';
 import FeaturedCaseStudy from '@/components/home/featured-case-study';
 import SecondaryCTA from '@/components/home/secondary-cta';
+import { CTAButtons } from "@/components/cta-buttons";
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -42,7 +43,7 @@ const jsonLd = {
       areaServed: 'ZA',
       serviceType: [
         'Web System Development',
-        'AI & Chatbots', 
+        'AI & Chatbots',
         'Cloud & DevOps'
       ],
       hasOfferCatalog: {
@@ -60,7 +61,7 @@ const jsonLd = {
           {
             '@type': 'Offer',
             itemOffered: {
-              '@type': 'Service', 
+              '@type': 'Service',
               name: 'AI & Chatbots',
               description: 'Lead bots, support bots, RAG over your docs'
             }
@@ -69,7 +70,7 @@ const jsonLd = {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Cloud & DevOps', 
+              name: 'Cloud & DevOps',
               description: 'Azure/AWS, CI/CD, containers, monitoring'
             }
           }
@@ -136,6 +137,9 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <HeroSection />
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-8">
+        <CTAButtons />
+      </div>
       <ValueProps />
       <FeaturedCaseStudy />
       <SecondaryCTA />

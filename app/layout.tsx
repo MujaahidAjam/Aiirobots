@@ -1,12 +1,13 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
-import WhatsAppFloat from '@/components/ui/whatsapp-float';
-import { SITE } from '@/lib/site';
+// app/layout.tsx
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+import FloatingWhatsApp from "@/components/floating-whatsapp";
+import { SITE } from "@/lib/site";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -14,32 +15,33 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description: SITE.subheading,
-  keywords: 'web development, AI chatbots, cloud services, DevOps, South Africa, Next.js, business automation',
+  keywords:
+    "web development, AI chatbots, cloud services, DevOps, South Africa, Next.js, business automation",
   authors: [{ name: SITE.name, url: SITE.url }],
   creator: SITE.name,
   publisher: SITE.name,
   metadataBase: new URL(SITE.url),
   openGraph: {
-    type: 'website',
-    locale: 'en_ZA',
+    type: "website",
+    locale: "en_ZA",
     url: SITE.url,
     siteName: SITE.name,
     title: `${SITE.name} - ${SITE.tagline}`,
     description: SITE.subheading,
     images: [
       {
-        url: '/og-image.png',
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: `${SITE.name} - Professional web development and AI solutions`,
-      }
-    ]
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: `${SITE.name} - ${SITE.tagline}`,
     description: SITE.subheading,
-    images: ['/og-image.png'],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -47,25 +49,22 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    }
-  }
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: { icon: "/favicon.ico" }, // prevents the favicon 404
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} min-h-screen bg-slate-50 text-slate-900 antialiased`}>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
-        <WhatsAppFloat />
+        <FloatingWhatsApp />
       </body>
     </html>
   );
