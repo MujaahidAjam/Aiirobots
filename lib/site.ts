@@ -5,9 +5,9 @@ export const SITE = {
   email: "legionwebtech@gmail.com",
   phone: "+27 64 047 2350",
   whatsappUrl: "https://wa.me/27640472350",
-  calendlyUrl: "https://calendly.com/your-handle/intro-20",
   tagline: "AI & Web Systems that actually ship.",
-  subheading: "We build modern web systems, practical AI/chatbots, and cloud setups tailored to your business—fast, secure, and scalable."
+  subheading:
+    "We build modern web systems, practical AI/chatbots, and cloud setups tailored to your business—fast, secure, and scalable.",
 };
 
 export const SERVICES = [
@@ -17,7 +17,7 @@ export const SERVICES = [
     icon: "Globe",
     features: [
       "Next.js applications with modern design",
-      "Secure authentication & user portals", 
+      "Secure authentication & user portals",
       "Admin dashboards & data visualization",
       "API integrations & third-party services",
       "Analytics setup & conversion tracking",
@@ -26,7 +26,7 @@ export const SERVICES = [
     tools: ["Next.js", "Node/.NET", "PostgreSQL/Supabase", "Stripe/PayFast", "REST/GraphQL"]
   },
   {
-    title: "AI & Chatbots", 
+    title: "AI & Chatbots",
     description: "Lead bots, support bots, RAG over your docs",
     icon: "Bot",
     features: [
@@ -42,7 +42,7 @@ export const SERVICES = [
   {
     title: "Cloud & DevOps",
     description: "Azure/AWS, CI/CD, containers, monitoring",
-    icon: "Cloud", 
+    icon: "Cloud",
     features: [
       "Azure/AWS infrastructure setup",
       "CI/CD pipelines with GitHub Actions",
@@ -58,7 +58,7 @@ export const SERVICES = [
 export const TESTIMONIALS = [
   {
     name: "Nomsa M.",
-    role: "Boutique Owner", 
+    role: "Boutique Owner",
     content: "Aii Robots rebuilt our site in 3 weeks. Sales chats doubled and checkout is smoother.",
     rating: 5
   },
@@ -69,14 +69,14 @@ export const TESTIMONIALS = [
     rating: 5
   },
   {
-    name: "Thandi N.", 
+    name: "Thandi N.",
     role: "Clinic Manager",
     content: "The support bot cut phone calls dramatically and patients get answers 24/7.",
     rating: 5
   },
   {
     name: "Sipho K.",
-    role: "E-commerce Lead", 
+    role: "E-commerce Lead",
     content: "Cloud setup is stable and deploys are easy. Great comms and documentation.",
     rating: 5
   }
