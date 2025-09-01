@@ -8,6 +8,7 @@ export const SITE = {
   tagline: "AI & Web Systems that actually ship.",
   subheading:
     "We build modern web systems, practical AI/chatbots, and cloud setups tailored to your business—fast, secure, and scalable.",
+  calendlyUrl: "https://calendly.com/YOUR_USERNAME/15min"
 };
 
 export const SERVICES = [
